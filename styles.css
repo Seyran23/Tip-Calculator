@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Sharada&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  background-color: #3eecac;
+  background-image: linear-gradient(19deg, #3eecac 0%, #ee74e1 100%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Noto Sans Sharada", sans-serif;
+
+  user-select: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  width: 400px;
+  padding: 30px;
+  border: 1px solid rgb(150, 148, 148);
+  border-radius: 12px;
+  box-shadow: 0 0 4px 2px rgba(142, 141, 141, 0.662);
+
+  background-color: whitesmoke;
+}
+
+.title {
+  font-size: 35px;
+}
+
+.form {
+  box-sizing: border-box;
+  width: 100%;
+
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  border-top: 1px solid rgba(128, 128, 128, 0.463);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.463);
+}
+
+.input_container {
+  display: flex;
+}
+
+input,
+select {
+  padding: 10px;
+}
+
+input {
+  width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.463);
+  border-radius: 0 5px 5px 0;
+  outline: none;
+}
+
+select {
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.463);
+  border-radius: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  border: 1px solid rgba(128, 128, 128, 0.463);
+  background-color: whitesmoke;
+}
+
+.icon_btn {
+  border-radius: 5px 0 0 5px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(128, 128, 128, 0.32);
+}
+
+#popup-box {
+  position: absolute;
+  bottom: -10%;
+  padding: 15px 30px;
+  color: white;
+  background: green;
+  border-radius: 4px;
+  opacity: 0;
+}
+
+.pop_up {
+  animation-name: move-up-and-down;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes move-up-and-down {
+  0%,
+  100% {
+    bottom: -10%;
+    opacity: 0;
+  }
+
+  25%,
+  75% {
+    bottom: 10%;
+    opacity: 1;
+  }
+
+  50% {
+    bottom: 10%;
+    opacity: 1;
+    animation-delay: 2.5s;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 430px) {
+  .container {
+    max-width: 300px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 390px) {
+  .container {
+    max-width: 250px;
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  #popup-box {
+    padding: 10px 20px;
+  }
+}

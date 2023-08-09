@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/b0a15d6cd9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Tip Calculator</h1>
+      <form action="" class="form">
+        <div class="form_question">
+          <label for="billAmount">Bill Amount</label>
+          <div class="input_container">
+            <button class="icon_btn">
+              <i class="fa-sharp fa-solid fa-dollar-sign"></i>
+            </button>
+            <input type="number" name="billAmount" id="billAmount" min="1" />
+          </div>
+        </div>
+        <div class="form_question">
+          <label for="numberOfGuests">Number of Guests</label>
+          <div class="input_container">
+            <button class="icon_btn"><i class="fa-solid fa-person"></i></button>
+            <input
+              type="number"
+              name="numberOfGuests"
+              id="numberOfGuests"
+              min="1"
+            />
+          </div>
+        </div>
+        <div class="form_question">
+          <label for="serviceQuality">Service Quality</label>
+          <select name="service quality" id="serviceQuality">
+            <option value="" disabled selected>Choose...</option>
+            <option value="outstanding">30% - outstanding</option>
+            <option value="good">20% - Good</option>
+            <option value="it was ok">15% - It was ok</option>
+            <option value="bad">10% - Bad</option>
+            <option value="terrible">5% - Terrible</option>
+          </select>
+        </div>
+      </form>
+      <button class="btn">Calculate</button>
+    </div>
+
+    <div id="popup-box"></div>
+  </body>
+</html>
