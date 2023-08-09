@@ -28,6 +28,9 @@ function getInputedValues() {
     let serviceQuality = selectEl.value.trim();
     tipPercentage = serviceQualityObj[serviceQuality];
   } else {
+    if (billAmount < numOfGuests) {
+      alert("Please enter the invalid numbers");
+    }
     alert("Please fulfill the all fields");
     return;
   }
